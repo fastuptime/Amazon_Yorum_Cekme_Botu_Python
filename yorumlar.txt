@@ -1,0 +1,101 @@
+Within a couple of weeks of getting device, ASUSTOR announced a Ransomware attack weakness. The mitigation was seriously non-trivial and require disabling one of the NAS main features for remote access.
+If I hadn't already invested in hard drives and initial setup. I would have sent the device back.
+I am an experience IT professional and I found the device quite hard to work with, it lacks both the simplicity of a consumer focused device and the sophistication of a commercial product.
+It has many good features - 2.5Gbe (the main reason for purchase) plus support for SSD and NVME drives.
+My main applications are:-
+Fast data transfer for Acronis backup of 3 PCs - thus 2.5Gbe requirement
+Single point of storage for media - Ripped CDs, DVDs and Photos
+Peace of mind (Raid 5 plus single backup)
+The Asustor fulfills all of these at a considerable price but 2 weeks after the Deadbolt attack there isn't a long-term fix that doesn't reduce the NAS functionality.
+Ich habe mich für dieses Gehäuse entschieden, da es verspricht die eierlegende Wollmilchsau zu sein, nach der ich gesucht habe.
+
+Sie besitzt einen HDMI Ausgang, an dem man seinen Fernseher anstecken kann. Wenn man die zugehörige App installiert, erscheint dort ein etwas sperrlicher Browser, mit dem man Videos über Youtube / Netflix schauen kann. Leider hängt sich das Ding während der Wiedergabe sporadisch, aber spätestens nach 30 Minuten so hart auf, dass es nur noch ein harter Reset wieder zurück ins Leben ruft. Nach dem Stromausfall braucht es dann wieder einige Stunden, bis die Integrität des RAIDs wiederhergestellt ist, was zusätzlich die Festplatten stark belastet, da alle komplett gelesen werden.
+
+Der darauf enthaltene Webserver + Wordpress und die automatische Zertifikatserneuerung mit LetsEncrypt funktioniert einwandfrei.
+
+Sobald man den Plex Media Server installiert, geht das Ding nicht mehr in den Powersave und läuft 24/7 durch, was für mich keine Option ist, da ich an der Stelle schon gerne etwas Energie gespart hätte.
+
+Docker Container und die Verwaltung mit Portainer ist ganz cool gelöst und scheint auch ganz gut zu funktionieren.
+
+Aktuell kämpfe ich damit, dass der Samba Server (obwohl er deaktiviert ist) permanent Festplattenzugriffe durchführt, was ebenfalls dafür sorgt, dass die Festplatten nie in den hibernate Zustand gehen.
+
+Grundsätzlich scheint es so, als würden Pakete/Apps, beim Deinstallieren nicht sauber aufgeräumt zu werden. Wie man das über die Kommandozeile bereinigt, habe ich auch noch nicht rausgefunden.
+
+Der UPnP Media Server funktioniert auch ganz gut.
+
+Das Betriebssystem scheint nur n selbstgebauter Kernel mit ner Busybox zu sein.
+
+Fazit:
+Da die HDMI Schnittstelle quasi komplett unbrauchbar ist, das Ding quasi nie mehr in den Ruhezustand geht, sobald man einmal das falsche Paket installiert hat und die viele der beworbenen Funktionen verhindern, dass es jemals in den Ruhezustand geht, gibt es nur einen Stern.
+Premetto che se stessimo parlando di un prodotto economico, pensato per l'utente senza troppe pretese, il mio giudizio sarebbe diverso. I dischi hanno i soliti alloggiamenti ad accesso rapido, con telaio in alluminio (bene!). Montati i dischi, il Nas parte senza problemi e mostra il suo IP già sul display esterno.
+Accedendo alla sua pagina web, lo si configura con pochissimo sforzo, con una guida introduttiva che fornisce utili suggerimenti. Ci sono decine di applicazioni disponibili sullo store Asustor e non ho incontrato particolari problemi.
+In compenso non sembra possibile suddividere un disco in più volumi, cosa che ad esempio facevo sul mio QNAP vecchio di 8 anni, per separare il sistema dai dati. Peggio: aggiungendo un SSD M.2 per il caching o per un accesso più rapido a dati importanti come le macchine virtuali di VirtuaBox, non è possibile configurare alcun overprovisioning, vale a dire lasciare una parte dei dati non utilizzata dal file system, pratica che migliora velocità e durata dell'SSD. Inoltre un SSD si può utilizzare solo come cache oppure come spazio di archiviazione, non suddiviso per entrambe le cose. Va bè, userò il mio come memoria veloce per macchine virtuali e simili, lascio perdere la cache in lettura.
+Infine, è possibile aggiungere 4 Gb di RAM per portare la memoria totale del sistema a 8 Gb. Purtroppo la lista di compatibilità sul sito di Asustor è la peggiore che abbia mai visto. Non solo vengono riportati solo un paio di modelli dei produttori principali, ma sembra anche una lista compilata a caso. Come mostro dal collage di screenshot, ad esempio, uno dei moduli "compatibili" viene indicato come DDR3 anziché DDR4.
+E' pure indicato come banco da 16 Gb, il che mi dà da pensare, visto che Intel indica 8 Gb al massimo per il processore montato dal NAS, e i 4 Gb di base non si possono rimuovere.
+I 4 Gb installati di base sono inadeguati se si vuole usare il NAS come piccolo server per virtualizzazione, DB o Docker. Come faccio a portarli ad 8?Ho provato a montare un banco con le stesse specifiche, ma non ho avuto fortuna. Adesso ho ordinato un banco Crucial che arriverà più avanti, sperando di avere più fortuna: non ho molta voglia di ordinare dagli USA la costosissima memoria Asustor, né la Storex/Winten dal Giappone, né la Klevv da... chissà, non la trovo proprio. Vendi in Europa un NAS da oltre 600 euro? Mi aspetto che tu, produttore, fornisca un elenco di memorie compatibili che non richieda di fare shopping dall'altra parte del globo! Kingston, Crucial e Corsair sono il minimo sindacale. E magari non mischiare moduli (presunti) DDR3 e DDR4, o usare dimensioni a caso, eh?
+Spero che siano peccati di gioventù, trattandosi di un modello recente, scelto apposta per assicurarmi un supporto duraturo. Ora come ora (Aprile 2021), però, sono problemi fastidiosi in un prodotto di questo livello.
+
+Aggiornamento: sono riuscito ad espandere la memoria ad 8 Gb spendendo meno di 30 euro, utilizzando un banco Crucial CT4G4SFS824A, raccomandato da Asustor per un modello diverso.
+https://www.amazon.it/gp/product/B019FRDKWI/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1
+
+Se avete bisogno di usare VirtualBox, installate sia l'applicazione che le estensioni (separate per questioni di copyright) e poi nelle impostazioni della VM, andate sul tab Display e attivate "display remoto". In questo modo, potrete usare Accesso Remoto di Windows (o un client equivalente) per pilotare la VM anche durante l'installazione, senza nessun bisogno di collegare il NAS a video e tastiera.
+Appears easy to set up; but under the surface it is a general purpose computer running a customised version of linux called ADM which opens up (by default) a wide variety of undesirable services on default ports. Expert knowledge needed to customise to use securely in a network which has external connections. Vendors explicitly state that it isn't a backup device and when it randomly decides to encrypt files a week after contacting support they haven't even replied. Would be better to get an old pc and run a supported OS from a major vendor.
+The item arrived a day late so wasn't happy. The NAS was easy to set up. It runs very quietly. However, the available software tools are very poor, which make me wish I'd stayed with Qnap
+WDの4TB SSDを4つで組んでみました。以下感想です。
+
+・筐体は良い。トレイが金属製で収まりも良い。
+・初期垢がadmin/adminという低セキュリティ。パスを変更しなさいというメッセージもなし。
+・UIはSynologyを真似ているというかそっくり、デスクトップアプリの画面もSynologyを真似ている。
+・ドライブをセットし電源ONだけで、勝手にRAID5に設定されてBtrfsボリュームが作られフォーマットまで行われる。ストレージプールもなければRAID構成も選べない。このクラスのNASユーザを馬鹿にしている？
+・RAID構築時間は遅め。SSDなのに同期速度が200MB/sしか出ない。QNAP（TS-453D）は300MB/s以上出る。
+・CPUがJ4125のためSATAポートが足りず内部的にPCIeブリッジで接続しているが、ベイ数的にPCIe2.0x4をx2で割り振って10Gbpsにすれば良いところx1でしか振っていないため、SATA3の速度に届かず実質SATA2速度での動作に限定される。よってSATAのSSDも単体シーケンシャルRWで300MB/s止まり。
+・ファイアウォールがネガティブリスト形式（BLを手動で全部登録）。他のNASのFWはポジティブリスト方式（日本以外は全部登録等）。使い物にならない。
+・自社DDNSが他社DDNSと混在していて不適切。自社DDNSが存在しないのかと思った。
+・Let's encryptが外部ポート80でしか設定されない。443を使わない。
+・UPnPにてSFTPやRsyncのポートを勝手に開こうとする。
+・SFTPやRsyncが標準で有効化されている（外部ポートも）。閉じると他のサービスに影響。ファイル共有系のサービスを内外的にSFTPで処理している。
+・ファイル同期アプリEZ syncが共有フォルダを処理出来ず専用フォルダしか見れない。このため共有フォルダを使うSMBやフォト・動画・ミュージック系アプリから閲覧出来ない。
+
+はっきり言って、QNAPやSynologyの足元にも及ばないソフトウェアの出来です。ハード設計も良くないです（特にPCIeブリッジの設計）。
+Hallo,
+
+bisher waren Synology, Qnap, FreeNAS, und sogar unRaid im Einsatz.
+Bei allen hatte ich früher oder später immer was zu meckern. ¯\_(ツ)_/¯
+Entweder war die Homepage die gehostet werden soll zu langsam oder ging das SMB zeitweise nicht usw. usw. (╯°□°）╯︵ ┻━┻
+
+Jetzt habe ich vor kurzem von Asustor gehört und ein bisschen das Sortiment durchgesehen.
+Dort bin auf das AS6604T (Lockerstor 4) gestoßen.
+
+Intel Celeron J4125 4x 2.0GHz (Boost bis 2.70 GHz) - Kein ARM sondern x86 schon mal gut.
+2x M2 SSDs (Cache) und 4x 3.5" / 2.5" Schächte für HDDs oder SSDs.
+2x 2.5G Ethernet
+3x USB 3.2
+1x 4GB verbaut und kann mit 1x 4GB auf 8GB erweitert werden.
+Also 2x 4GB DDR4 RAM - laut Hersteller. ?!?!?! NIEMALS!
+
+So wie es ankam, wurde es auch schon zerlegt. "ヽ('▽｀)ノ"
+
+2x 1TB M2 SSDs wurden verbaut. 1x 8GB DDR4 wurde in den freien Slot (der nur 4GB unterstützt) gesteckt und in kürze kommt ein RGB Lüfter (Für mehr Leistung (っ▀¯▀)つ )
+Das Teil wieder verschraubt und 4x 5TB HDDs verbaut.
+Eingeschalten , konfiguriert und siehe da, es läuft.
+
+Zurzeit hostet das NAS eine Homepage 24/7, ist erreichbar unter SSH und SFTP (auch aus dem Internet),
+SMB, TS3 Server im Docker, Virtual Box, Linux Center (Ausgabe per HDMI) und IP-GEO ist aktiv!! wie geil ist das den.
+
+LACP Fail-Over-Funktion, externe Anschlussmöglichkeiten, viele Apps, Mediacenterfähig (KODI, PLEX), VMware-, Citrix- und Hyper-V-fähig - Unterstützt Virtualisierungen und Docker Apps.
+Cloud-Backup wer es braucht (AWS, GDrive, etc.), erweiterbar mit NAS-Extension, sehr einfache Handhabung und Inbetriebnahme, sehr simples Betriebssystem in der Anwendung.
+
+Verbrauch: 1 W (Schlafmodus) , 13 W (Festplatten-Ruhezustand) , 28 W (Betrieb)
+
+Die Reaktionszeiten im ADM sind das einzige was ich zu bemängeln habe.
+Sonst bin sehr zufrieden.
+ASUS guter Job! ☜(⌒▽⌒)☞
+Ayant eu que des synology, ca change ! On a un NAS en mode fusée avec des ports réseaux que depotent et une evolutivité bien meilleure. ICI on a 2 ports nvme de base et 2 ports 2,5Gb. J'ai ajouté de la Ram et suis à 16Gb !
+Il y a peu de littérature dessus mais c'est le meilleur de tous mes précédents synology. Il lui manque juste des applications mieux développées mais pour du stockage réseau, il est vraiment top
+Comprato per sostituire un DROBO 5N2 e l'utilizzo prevalente sarà quello di PLEX e ROON server (per ora solo il primo) sopratutto perché il DROBO era poco silenzioso. L'installazione è stata semplice e anche la configurazione, sembra molto solido ed aggiungere RAM e 1 disco SSD per la cache non è stato difficile.
+E' davvero silenzioso, più veloce del Drobo e Plex gira molto meglio, per ora soddisfatto ma ho appena finito di configurarlo (4 dischi WD RED da 8TB)
+Llegada a tiempo.
+Le he puesto 3 discos de 4tb en raid 5
+Le he añadido la memoria ram de la fotografía. Sin problemas los 12 gb
+Discos m2 para cache
+Estoy todavía configurando y añadiendo servicios
