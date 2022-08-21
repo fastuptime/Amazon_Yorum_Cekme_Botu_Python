@@ -2,7 +2,7 @@
 
 Örnek Link: https://www.amazon.com.tr/Asustor-Lockerstor-Quad-Core-Refresh-Yuvalar%C4%B1/product-reviews/B089WKDKQK/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews
 
-Yorumların Tamamının Olduğu Sayfanın Linkini Almalısınız
+# Yorumların Tamamının Olduğu Sayfanın Linkini Almalısınız
 Amazon Yorum Çekme Botu Python Selenium
 
 [Indirmeyi Unutmayın Bu Olmadan Çalışmaz!](https://chromedriver.chromium.org/downloads)
