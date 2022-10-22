@@ -11,7 +11,6 @@ Amazon Yorum Çekme Botu Python Selenium
 ## Örnek Bir Bottur Topluluğa Katkı İçin Yapılmıştır!
 
 ## Adreslerimiz
----
 
 - ✨ [FastUptime](https://fastuptime.com)
 
